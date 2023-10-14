@@ -19,7 +19,7 @@ What the status means is the assumption that you should do.
 
 ## Nodes
 
-New nodes are welcome to provide redundancy. Anything that supports [fetch(8)](https://man.freebsd.org/cgi/man.cgi?query=fetch&apropos=0&sektion=0&manpath=FreeBSD+13.2-RELEASE+and+Ports&arch=default&format=html) is acceptable, such as FTP or HTTP, but the latter is preferable. SFTP is preferred for file management, but anything else you can provide is acceptable. If you are interested, please contact me or join the Telegram group.
+New nodes are welcome to provide redundancy. Anything that supports [fetch(8)](https://man.freebsd.org/cgi/man.cgi?query=fetch) is acceptable, such as FTP or HTTP, but the latter is preferable. SFTP is preferred for file management, but anything else you can provide is acceptable. If you are interested, please contact me or join the Telegram group.
 
 **Current Nodes**:
 
