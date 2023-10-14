@@ -24,6 +24,7 @@ New nodes are welcome to provide redundancy. Anything that supports [fetch(8)](h
 **Current Nodes**:
 
 * [HPC.at](http://appjail.hpc.at/)
+* [K&T Host](https://images.all101bsd.download/)
 * [Google Drive](https://drive.google.com/drive/folders/1GSU3EqDwPH1Q_08Xbcwc0c4b5XcJ7TJd)
 
 ## How to contribute a new Makejail
