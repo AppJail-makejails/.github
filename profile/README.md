@@ -21,6 +21,10 @@ What the status means is the assumption that you should do.
 
 All images were built using [AppJail Reproduce](https://github.com/DtxdF/reproduce).
 
+## Deploy
+
+You can deploy a stack of applications using [AppJail Director](https://github.com/DtxdF/director).
+
 ## Nodes
 
 New nodes are welcome to provide redundancy. Anything that supports [fetch(1)](https://man.freebsd.org/cgi/man.cgi?query=fetch) is acceptable, such as FTP or HTTP, but the latter is preferable. SFTP is preferred for file management, but anything else you can provide is acceptable. If you are interested, please contact me or join the Telegram group.
