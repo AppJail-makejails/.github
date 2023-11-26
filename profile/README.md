@@ -17,6 +17,10 @@ What the status means is the assumption that you should do.
 * `safe`: I am not updating images, so everything should work correctly.
 * `updating`: I am updating images, this means that when I upload files I overwrite the old files with the new ones, so the checksum may not match, the file cannot be found, etc. In many cases this is fixed very quickly.
 
+## Images
+
+All images were built using [AppJail Reproduce](https://github.com/DtxdF/reproduce).
+
 ## Nodes
 
 New nodes are welcome to provide redundancy. Anything that supports [fetch(1)](https://man.freebsd.org/cgi/man.cgi?query=fetch) is acceptable, such as FTP or HTTP, but the latter is preferable. SFTP is preferred for file management, but anything else you can provide is acceptable. If you are interested, please contact me or join the Telegram group.
