@@ -27,7 +27,7 @@ You can deploy a stack of applications using [AppJail Director](https://github.c
 
 ## AppJail vs. AppJail (devel)
 
-All these Makejails were created using [sysutils/appjail-devel](https://www.freshports.org/sysutils/appjail-devel) (or the latest version installed using [git(1))](https://man.freebsd.org/cgi/man.cgi?query=git) to take advantage of the latest features.
+All these Makejails were created using [sysutils/appjail-devel](https://www.freshports.org/sysutils/appjail-devel) (or the latest version installed using [git(1)](https://man.freebsd.org/cgi/man.cgi?query=git) to take advantage of the latest features.
 
 ## Nodes
 
