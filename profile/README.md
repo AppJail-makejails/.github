@@ -8,7 +8,7 @@ github.com/DtxdF/AppJail
 
 ## Status
 
-**Current Status**: `safe`
+**Current Status**: `updating`
 
 Every week I update the images of all the projects to provide security updates or simply update dependencies. When doing these updates I try to automate everything, but in some other operations I have to update manually, namely when updating ajspec files. I am actively working to automate everything.
 
