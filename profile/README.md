@@ -45,6 +45,8 @@ New nodes are welcome to provide redundancy. Anything that supports [fetch(1)](h
 ```sh
 #!/bin/sh
 
+USER_AGENT="Mozilla/5.0 (Windows NT 10.0; rv:124.0) Gecko/20100101 Firefox/124.0"
+
 MIRROR="$1"
 
 if [ -z "${MIRROR}" ]; then
@@ -58,7 +60,7 @@ case "$1" in
     *) "$0"; exit 1 ;;
 esac
 
-wget --no-host-directories -N -c -r "${MIRROR_URL}"
+wget --user-agent="${USER_AGENT}" --no-host-directories -N -c -r "${MIRROR_URL}"
 ```
 
 ## How to contribute a new Makejail
