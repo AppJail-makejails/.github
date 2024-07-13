@@ -38,6 +38,29 @@ New nodes are welcome to provide redundancy. Anything that supports [fetch(1)](h
 * [HPC.at](http://appjail.hpc.at/)
 * [K&T Host](https://images.all101bsd.download/)
 
+**mirror.sh**:
+
+`cd(1)` to your web directory and run the following script. It will recursively download each directory with its files, including the `index.html` file, resulting in an exact copy of the mirror you selected.
+
+```sh
+#!/bin/sh
+
+MIRROR="$1"
+
+if [ -z "${MIRROR}" ]; then
+    echo "usage: mirror.sh <HPC|KNT>"
+    exit 1
+fi
+
+case "$1" in
+    HPC) MIRROR_URL="http://appjail.hpc.at" ;;
+    KNT) MIRROR_URL="https://images.all101bsd.download" ;;
+    *) "$0"; exit 1 ;;
+esac
+
+wget --no-host-directories -N -c -r "${MIRROR_URL}"
+```
+
 ## How to contribute a new Makejail
 
 New Makejails are welcome. Send Makejail or provide a project that you think can be automated in a useful way in the following means:
