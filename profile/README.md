@@ -17,6 +17,44 @@ What the status means is the assumption that you should do.
 * `safe`: I am not updating images, so everything should work correctly.
 * `updating`: I am updating images, this means that when I upload files I overwrite the old files with the new ones, so the checksum may not match, the file cannot be found, etc. In many cases this is fixed very quickly.
 
+### Building your own images
+
+If for some reason, for example, you see the above problems I have described because the status page is `updating` or you prefer to build your own images for security reasons, you can, and it is easier with [appjail-reproduce](https://github.com/DtxdF/reproduce), just follow the steps below.
+
+```sh
+appjail-reproduce -fb hello
+git clone https://github.com/AppJail-makejails/hello.git
+cd ./hello/
+cp -f /usr/local/appjail/cache/images/hello/.ajspec .
+```
+
+From the **Makejail**, change the `--entrypoint` value of the `FROM` instruction to `none`.
+
+**old**:
+
+```
+FROM --entrypoint gh+AppJail-makejails/hello --platform "${hello_platform}" hello:${hello_tag}
+```
+
+**new**:
+
+```sh
+FROM --entrypoint none --platform "${hello_platform}" hello:${hello_tag}
+```
+
+And deploy:
+
+```sh
+appjail makejail \
+    -j hello \
+    -f Makejail \
+    -o virtualnet=":<random> default" \
+    -o nat
+```
+
+**Note#1**: The same principle applies to other images, but you must read the README of the project you want to deploy.
+**Note#2**:: The above steps assume that you have already followed the instructions in the [appjail-reproduce](https://github.com/DtxdF/reproduce) repository.
+
 ## Images
 
 All images were built using [AppJail Reproduce](https://github.com/DtxdF/reproduce).
