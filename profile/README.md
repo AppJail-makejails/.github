@@ -53,7 +53,8 @@ appjail makejail \
 ```
 
 **Note#1**: The same principle applies to other images, but you must read the README of the project you want to deploy.
-**Note#2**:: The above steps assume that you have already followed the instructions in the [appjail-reproduce](https://github.com/DtxdF/reproduce) repository.
+
+**Note#2**: The above steps assume that you have already followed the instructions in the [appjail-reproduce](https://github.com/DtxdF/reproduce) repository.
 
 ## Images
 
