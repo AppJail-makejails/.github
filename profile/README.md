@@ -24,7 +24,7 @@ If for some reason, for example, you see the above problems I have described bec
 ```sh
 appjail makejail \
     -j hello \
-    -f Makejail \
+    -f gh+AppJail-makejails/hello \
     -o virtualnet=":<random> default" \
     -o nat -- \
         --hello_ajspec reproduce+hello
