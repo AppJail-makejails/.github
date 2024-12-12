@@ -22,34 +22,12 @@ What the status means is the assumption that you should do.
 If for some reason, for example, you see the above problems I have described because the status page is `updating` or you prefer to build your own images for security reasons, you can, and it is easier with [appjail-reproduce](https://github.com/DtxdF/reproduce), just follow the steps below.
 
 ```sh
-appjail-reproduce -fb hello
-git clone https://github.com/AppJail-makejails/hello.git
-cd ./hello/
-cp -f /usr/local/appjail/cache/images/hello/.ajspec .
-```
-
-From the **Makejail**, change the `--entrypoint` value of the `FROM` instruction to `none`.
-
-**old**:
-
-```
-FROM --entrypoint gh+AppJail-makejails/hello --platform "${hello_platform}" hello:${hello_tag}
-```
-
-**new**:
-
-```sh
-FROM --entrypoint none --platform "${hello_platform}" hello:${hello_tag}
-```
-
-And deploy:
-
-```sh
 appjail makejail \
     -j hello \
     -f Makejail \
     -o virtualnet=":<random> default" \
-    -o nat
+    -o nat -- \
+        --hello_ajspec reproduce+hello
 ```
 
 **Note#1**: The same principle applies to other images, but you must read the README of the project you want to deploy.
