@@ -8,14 +8,10 @@ github.com/DtxdF/AppJail
 
 ## Status
 
-**Current Status**: `updating`
+Every 21 days all AppJail images will be created thanks to the great CI/CD framework, [BuildBot](https://buildbot.net/). In addition, for each commit in repositories that use AppJail images, the image will be recreated and uploaded again. There are only two exceptions:
 
-Every week I update the images of all the projects to provide security updates or simply update dependencies. When doing these updates I try to automate everything, but in some other operations I have to update manually, namely when updating ajspec files. I am actively working to automate everything.
-
-What the status means is the assumption that you should do.
-
-* `safe`: I am not updating images, so everything should work correctly.
-* `updating`: I am updating images, this means that when I upload files I overwrite the old files with the new ones, so the checksum may not match, the file cannot be found, etc. In many cases this is fixed very quickly.
+1.- The image is not created if the change contains the `.ajspec` file.
+2.- The image is not created if the commit message contains the `[SKIP-BUILD]` keyword.
 
 ### Building your own images
 
