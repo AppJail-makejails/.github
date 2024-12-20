@@ -10,8 +10,8 @@ github.com/DtxdF/AppJail
 
 Every 21 days all AppJail images will be created thanks to the great CI/CD framework, [BuildBot](https://buildbot.net/). In addition, for each commit in repositories that use AppJail images, the image will be recreated and uploaded again. There are only two exceptions:
 
-1.- The image is not created if the change contains the `.ajspec` file.
-2.- The image is not created if the commit message contains the `[SKIP-BUILD]` keyword.
+1. The image is not created if the change contains the `.ajspec` file.
+2. The image is not created if the commit message contains the `[SKIP-BUILD]` keyword.
 
 ### Building your own images
 
