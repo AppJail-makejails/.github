@@ -101,3 +101,21 @@ Think about using a Makejail that just installs the application, like WordPress 
 #### Be respectful of user preferences unless there is a need not to
 
 This is not to stick to only one network feature that AppJail supports in order to use a project. If a user prefers to use DHCP instead of Virtual Networks, that is the user's problem.
+
+## To bump
+
+Some Makejails require changing the source project version to the new version, so it is necessary to keep track of them.
+
+* [Alpine Linux](https://github.com/AppJail-makejails/alpine-linux/blob/main/update/update.conf)
+* [Burp Suite](https://github.com/AppJail-makejails/burpsuite/blob/main/update/update.conf)
+* [InvenTree](https://github.com/AppJail-makejails/inventree/blob/main/update/update.conf)
+* [AdminerEvo](https://github.com/AppJail-makejails/inventree/blob/main/update/update.conf)
+* [MariaDB](https://github.com/AppJail-makejails/mariadb/blob/main/update/update.conf)
+* [WordPress](https://github.com/AppJail-makejails/wordpress/blob/main/update/update.conf)
+* [PHP](https://github.com/AppJail-makejails/php/blob/main/update/update.conf)
+* [File Browser](https://github.com/AppJail-makejails/filebrowser/blob/main/update/update.conf)
+* [GO](https://github.com/AppJail-makejails/go/blob/main/update/update.conf)
+* [Python](https://github.com/AppJail-makejails/python/blob/main/update/update.conf)
+* [Homepage](https://github.com/AppJail-makejails/homepage/blob/main/update/update.conf)
+* [Calibre Web](https://github.com/AppJail-makejails/homepage/blob/main/update/update.conf)
+* [Lychee](https://github.com/AppJail-makejails/lychee/blob/main/update/update.conf)
