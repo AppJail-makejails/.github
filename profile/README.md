@@ -119,6 +119,6 @@ Some Makejails require changing the source project version to the new version, s
 * [Homepage](https://github.com/AppJail-makejails/homepage/blob/main/update/update.conf)
 * [Calibre Web](https://github.com/AppJail-makejails/homepage/blob/main/update/update.conf)
 * [Lychee](https://github.com/AppJail-makejails/lychee/blob/main/update/update.conf)
-* [DataplaneAPI](https://github.com/AppJail-makejails/haproxy/blob/main/update/update.conf)
+* [Data Plane API](https://github.com/AppJail-makejails/haproxy/blob/main/update/update.conf)
 * [NGINX UI](https://github.com/AppJail-makejails/nginx-ui/blob/main/update/update.conf)
 * [Toxiproxy](https://github.com/AppJail-makejails/toxiproxy/blob/main/update/update.conf)
