@@ -118,5 +118,4 @@ Some Makejails require changing the source project version to the new version, s
 * [Python](https://github.com/AppJail-makejails/python/blob/main/update/update.conf)
 * [Homepage](https://github.com/AppJail-makejails/homepage/blob/main/update/update.conf)
 * [Lychee](https://github.com/AppJail-makejails/lychee/blob/main/update/update.conf)
-* [Data Plane API](https://github.com/AppJail-makejails/haproxy/blob/main/update/update.conf)
 * [Toxiproxy](https://github.com/AppJail-makejails/toxiproxy/blob/main/update/update.conf)
