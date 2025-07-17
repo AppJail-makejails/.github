@@ -113,7 +113,6 @@ Some Makejails require changing the source project version to the new version, s
 * [MariaDB](https://github.com/AppJail-makejails/mariadb/blob/main/update/update.conf)
 * [WordPress](https://github.com/AppJail-makejails/wordpress/blob/main/update/update.conf)
 * [PHP](https://github.com/AppJail-makejails/php/blob/main/update/update.conf)
-* [File Browser](https://github.com/AppJail-makejails/filebrowser/blob/main/update/update.conf)
 * [GO](https://github.com/AppJail-makejails/go/blob/main/update/update.conf)
 * [Python](https://github.com/AppJail-makejails/python/blob/main/update/update.conf)
 * [Lychee](https://github.com/AppJail-makejails/lychee/blob/main/update/update.conf)
