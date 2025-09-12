@@ -111,7 +111,6 @@ Some Makejails require changing the source project version to the new version, s
 * [InvenTree](https://github.com/AppJail-makejails/inventree/blob/main/update/update.conf)
 * [AdminerEvo](https://github.com/AppJail-makejails/inventree/blob/main/update/update.conf)
 * [MariaDB](https://github.com/AppJail-makejails/mariadb/blob/main/update/update.conf)
-* [WordPress](https://github.com/AppJail-makejails/wordpress/blob/main/update/update.conf)
 * [PHP](https://github.com/AppJail-makejails/php/blob/main/update/update.conf)
 * [GO](https://github.com/AppJail-makejails/go/blob/main/update/update.conf)
 * [Python](https://github.com/AppJail-makejails/python/blob/main/update/update.conf)
