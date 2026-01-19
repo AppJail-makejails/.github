@@ -62,13 +62,12 @@ USER_AGENT="Mozilla/5.0 (Windows NT 10.0; rv:124.0) Gecko/20100101 Firefox/124.0
 MIRROR="$1"
 
 if [ -z "${MIRROR}" ]; then
-    echo "usage: mirror.sh <HPC|KNT>"
+    echo "usage: mirror.sh <HPC>"
     exit 1
 fi
 
 case "$1" in
     HPC) MIRROR_URL="http://appjail.hpc.at" ;;
-    KNT) MIRROR_URL="https://images.all101bsd.download" ;;
     *) "$0"; exit 1 ;;
 esac
 
