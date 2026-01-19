@@ -95,7 +95,7 @@ This is because it is preferable to separate the jails by function, this means t
 
 #### Makejails should automate what the project does, not limit to just install it
 
-Think about using a Makejail that just installs the application, like WordPress and doesn't configure it, what's the gain? I know for some projects they are really hard to automate, but with effort I think it is possible. *Wasting hours automating a project to use it in minutes is better than wasting hours installing and configuring it each time*.
+Think about using a Makejail that just installs the application, like WordPress and doesn't configure it, what's the gain? I know for some projects that are really hard to automate, but with effort I think it is possible. *Wasting hours automating a project to use it in minutes is better than wasting hours installing and configuring it each time*.
 
 #### Be respectful of user preferences unless there is a need not to
 
