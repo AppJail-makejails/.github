@@ -114,3 +114,4 @@ Some Makejails require changing the source project version to the new version, s
 * [PHP](https://github.com/AppJail-makejails/php/blob/main/update/update.conf)
 * [GO](https://github.com/AppJail-makejails/go/blob/main/update/update.conf)
 * [Python](https://github.com/AppJail-makejails/python/blob/main/update/update.conf)
+* [Flatnotes](https://github.com/AppJail-makejails/flatnotes/blob/main/update/update.conf)
