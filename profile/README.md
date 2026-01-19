@@ -49,7 +49,6 @@ New nodes are welcome to provide redundancy. Anything that supports [fetch(1)](h
 **Current Nodes**:
 
 * [HPC.at](http://appjail.hpc.at/)
-* [K&T Host](https://images.all101bsd.download/)
 
 **mirror.sh**:
 
