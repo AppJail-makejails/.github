@@ -8,31 +8,11 @@ github.com/DtxdF/AppJail
 
 ## Status
 
-Every 21 days all AppJail images will be created thanks to the great CI/CD framework, [BuildBot](https://buildbot.net/). In addition, for each commit in repositories that use AppJail images, the image will be recreated and uploaded again. There are only two exceptions:
+Every 21 days, all OCI images are updated via a GitHub workflow using [dbuild](https://freshports.org/sysutils/py-dbuild) and distributed through the GitHub registry.
 
-1. The image is not created if the change contains the `.ajspec` file.
-2. The image is not created if the commit message contains the `[SKIP-BUILD]` keyword.
+We are currently migrating from AppJail images to OCI images. AppJail images can no longer be downloaded, as the mirror is no longer operational.
 
-### Building your own images
-
-If for some reason, for example, you see the above problems I have described because the status page is `updating` or you prefer to build your own images for security reasons, you can, and it is easier with [appjail-reproduce](https://github.com/DtxdF/reproduce), just follow the steps below.
-
-```sh
-appjail makejail \
-    -j hello \
-    -f gh+AppJail-makejails/hello \
-    -o virtualnet=":<random> default" \
-    -o nat -- \
-        --hello_ajspec reproduce+hello
-```
-
-**Note#1**: The same principle applies to other images, but you must read the README of the project you want to deploy.
-
-**Note#2**: The above steps assume that you have already followed the instructions in the [appjail-reproduce](https://github.com/DtxdF/reproduce) repository.
-
-## Images
-
-All images were built using [AppJail Reproduce](https://github.com/DtxdF/reproduce).
+As an alternative, you can deploy OCI images from [daemonless.io](https://daemonless.io) using AppJail.
 
 ## Deploy
 
@@ -41,38 +21,6 @@ You can deploy a stack of applications using [AppJail Director](https://github.c
 ## AppJail vs. AppJail (devel)
 
 All these Makejails were created using [sysutils/appjail-devel](https://www.freshports.org/sysutils/appjail-devel) (or the latest version installed using [git(1)](https://man.freebsd.org/cgi/man.cgi?query=git)) to take advantage of the latest features.
-
-## Nodes
-
-New nodes are welcome to provide redundancy. Anything that supports [fetch(1)](https://man.freebsd.org/cgi/man.cgi?query=fetch) is acceptable, such as FTP or HTTP, but the latter is preferable. SFTP is preferred for file management, but anything else you can provide is acceptable. If you are interested, please contact me or join the Telegram group.
-
-**Current Nodes**:
-
-* [HPC.at](http://appjail.hpc.at/)
-
-**mirror.sh**:
-
-`cd(1)` to your web directory and run the following script. It will recursively download each directory with its files, including the `index.html` file, resulting in an exact copy of the mirror you selected.
-
-```sh
-#!/bin/sh
-
-USER_AGENT="Mozilla/5.0 (Windows NT 10.0; rv:124.0) Gecko/20100101 Firefox/124.0"
-
-MIRROR="$1"
-
-if [ -z "${MIRROR}" ]; then
-    echo "usage: mirror.sh <HPC>"
-    exit 1
-fi
-
-case "$1" in
-    HPC) MIRROR_URL="http://appjail.hpc.at" ;;
-    *) "$0"; exit 1 ;;
-esac
-
-wget --user-agent="${USER_AGENT}" --no-host-directories -N -c -r "${MIRROR_URL}"
-```
 
 ## How to contribute a new Makejail
 
@@ -99,17 +47,3 @@ Think about using a Makejail that just installs the application, like WordPress 
 #### Be respectful of user preferences unless there is a need not to
 
 This is not to stick to only one network feature that AppJail supports in order to use a project. If a user prefers to use DHCP instead of Virtual Networks, that is the user's problem.
-
-## To bump
-
-Some Makejails require changing the source project version to the new version, so it is necessary to keep track of them.
-
-* [Alpine Linux](https://github.com/AppJail-makejails/alpine-linux/blob/main/update/update.conf)
-* [Burp Suite](https://github.com/AppJail-makejails/burpsuite/blob/main/update/update.conf)
-* [InvenTree](https://github.com/AppJail-makejails/inventree/blob/main/update/update.conf)
-* [AdminerEvo](https://github.com/AppJail-makejails/inventree/blob/main/update/update.conf)
-* [MariaDB](https://github.com/AppJail-makejails/mariadb/blob/main/update/update.conf)
-* [PHP](https://github.com/AppJail-makejails/php/blob/main/update/update.conf)
-* [GO](https://github.com/AppJail-makejails/go/blob/main/update/update.conf)
-* [Python](https://github.com/AppJail-makejails/python/blob/main/update/update.conf)
-* [Flatnotes](https://github.com/AppJail-makejails/flatnotes/blob/main/update/update.conf)
